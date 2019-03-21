@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<meaning>
+<h:carta xmlns:h="http://www.iestriana.com/asir/">
+<h:direccion>IES Triana</h:direccion>
+<h:remitente>Angela</h:remitente>
+</h:carta>
+<g:carta xmlns:h="https://www.w3schools.com/game">
+<g:numero>10</g:numero>
+<g:palo>Oro</g:palo>
+</g:carta>
+</meaning>

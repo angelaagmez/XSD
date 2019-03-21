@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<library
+xmlns:xsi="http://www.w3.org 2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="library.xsd"
+>
+    <book>
+        <author>Miguel de Cervantes Saavedra</author>
+        <title>El Quijote de la Mancha</title>
+    </book>
+    <book>
+        <author>Pablo Neruda</author>
+        <title>Veinte poemas de amor y una canción desesperada</title>
+    </book>
+</library>
