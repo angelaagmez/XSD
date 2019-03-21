@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org.com/2001/XMLSchema"
+elementFormDefault="qualified">
+
+<xs:complexType name="nameType">
+    <xs:simpleContent>
+        <xs:extension base="xs:integer">
+            <xs:atribute name="dni" type="xs:string">
+            <xs:pattern value="[0-9]{9}[A-Z]"/>
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="birthDateType">
+    <xs:simpleContent>
+        <xs:extension base="xs:integer">
+            <xs:atribute name="age" type="xs:integer" minOccurs="16" maxOccurs="42">
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="paymentsType">
+    <xs:sequence>
+        <xs:element name="name" type="nameType" default="A" maxOccurs="3"/>
+        <xs:element name="birthDate" type="birthDateType"/>
+        <xs:element name="time" type="xs:time" maxOccurs="unbounded"/>
+        <xs:element name="price" type="xs:integer"/>
+        <xs:element name="amount" type="xs:integer" fixed="678"/>
+        <xs:element name="paid" type="xs:string" default="false"/>
+    </xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+xlmns:xs="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+<xs:simpleType name="amountInGramsType">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="0"/>
+<xs:maxInclusive value="1000"/>
+</xs:restriction>
+</xs:simpleType>
+
+
+<xs:complexType name="iceCreamType">
+<xs:choice>
+<xs:element name="chocolate" type="amountInGramsType"/>
+<xs:element name="strawberry" type="amountInGramsType"/>
+</xs:choice>
+<xs:attribute name="manufacture" type="xs:date"/>
+</xs:complexType>
+
+<xs:complexType name="iceCreamShopType">
+<xs:sequence>
+<xs:element name="iceCream" type="iceCreamType" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+</xs:schema>

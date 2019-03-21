@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<student dni="12345678A"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="alumni.xsd">
+ <name>Juan Garcia</name>
+ <address>
+  <street>Avenida de la Fuente</street>
+  <number>6</number>
+  <city>Dos Hermanas</city>
+  <province>Sevilla</province>
+ </address>
+ <phone>954556677</phone>
+ <phone>658034612</phone>
+</student>

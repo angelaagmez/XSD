@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="payments.xsd">
+ <name>Javier Toledano</name>
+ <birthDate>1998-02-04</birthDate>
+ <time>23:55:15</time>
+ <time>23:55:15</time>
+ <price>123.56</price>
+ <amount>678</amount>
+ <paid>true</paid>
+</payments>

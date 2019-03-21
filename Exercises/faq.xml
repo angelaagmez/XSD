@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="faq.xsd">
+ <info>
+  <title>WINDOWS? ONLY IF THEY OBLIGATE ME!</title>
+  <author>Linus Torvalds</author>
+  <email>torvalds@linux.org</email>
+  <version>1.0</version>
+  <date>1991-05-01</date>
+ </info>
+ <part>
+  <q>
+    <qtext>Why do I have to install Windows?</qtext>
+    <a>To me it also seems like a good question.</a>
+  </q>
+  <q>
+    <qtext>And what's the use?</qtext>
+    <a>Another ingenious question.</a>
+  </q>
+ </part>
+</faq>

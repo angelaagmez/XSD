@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+<xs:simpleType name="numberType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="500"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="provinceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Granada"/>
+      <xs:enumeration value="Sevilla"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="dniType">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[0-9]{8}[A-Z]"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="addressType">
+<xs:sequence>
+<xs:element name="street" type="xs:string"/>
+<xs:element name="number" type="numberType"/>
+<xs:element name="city" type="xs:string"/>
+<xs:element name="province" type="provinceType"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="studentType">
+<xs:sequence>
+<xs:element name="name" type="xs:string"/>
+<xs:element name="address" type="xs:addressType" minOccurs="1" maxOccurs="2"/>
+<xs:element name="phone" type="xs:integer" minOccurs="0" maxOccurs="5"/>
+</xs:sequence>
+<xs:attribute name="dni" type="dniType"/>
+</xs:complexType>
+
+<xs:complexType name="studentsType">
+<xs:sequence>
+<xs:element name="student" type="xs:studentType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:element name="students" type="studentsType"/>
+</xs:schema>

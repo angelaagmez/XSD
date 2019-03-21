@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org.com/2001/XMLSchema"
+elementFormDefault="qualified">
+
+<xs:simpleType name="codeType">
+    <xs:restriction base="xs:integer">
+        <xs:minInclusive value="1000"/>
+        <xs:maxInclsuive vale="9999"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="phoneType">
+    <xs:restriction base="xs:integer">
+        <xs:pattern value="[0-9]{9}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="formatType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="rustic"/>
+        <xs:enumeration value="softcover"/>
+        <xs:enumeration value="hardcover"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+<xs:complexType name="ownerType">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="phone" type="phoneType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="bookType">
+    <xs:sequence>
+        <xs:element name="title" type="xs:string"/>
+        <xs:element name="author" type="xs:string"/>
+        <xs:element name="publication" type="xs:integer"/>
+        <xs:element name="format" type="formatType" minOccurs="0"/>
+        <xs:element name="price" type="xs:integer"/>
+        <xs:element name="quantity" type="xs:integer"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="libraryType">
+    <xs:sequence>
+        <xs:element name="code" type="codeType"/>
+        <xs:element name="address" type="xs:string"/>
+        <xs:element name="phone" type="phoneType"/>
+        <xs:element name="owner" type="ownerType"/>
+        <xs:element name="book" type="bookType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+</xs:schema>
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="library-ex6.xsd">
+ <code>1263</code>
+ <address>San Fernando, 31</address>
+ <phone>933555555</phone>
+ <owner>
+  <name>Juanito</name>
+  <phone>656222111</phone>
+ </owner>
+ <book>
+  <title>One hundred years of loneliness</title>
+  <author>Gabriel García Márquez</author>
+  <format>Rustic</format>
+  <publication>1967</publication>
+  <price>23.5</price>
+ </book>
+</library>

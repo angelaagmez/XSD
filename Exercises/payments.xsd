@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+xmlns:xs="http://www.w3.org.com/2001/XMLSchema"
+elementFormDefault="qualified">
+
+<xs:complexType name="paymentsType">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string" default="A" maxOccurs="3"/>
+        <xs:element name="birthDate" type="xs:date"/>
+        <xs:element name="time" type="xs:time" maxOccurs="unbounded"/>
+        <xs:element name="price" type="xs:integer"/>
+        <xs:element name="amount" type="xs:integer" fixed="678"/>
+        <xs:element name="paid" type="xs:string" default="false"/>
+    </xs:sequence>
+</xs:complexType>
+</xs:schema>
